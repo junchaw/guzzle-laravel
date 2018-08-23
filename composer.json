@@ -1,0 +1,23 @@
+{
+    "name": "wbswjc/guzzle",
+    "description": "Customized guzzle client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wu Junchao",
+            "email": "me@wujunchao.com",
+            "homepage": "https://wujunchao.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7",
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/support": "~5.5|~5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wu\\Guzzle\\": "src"
+        }
+    }
+}
