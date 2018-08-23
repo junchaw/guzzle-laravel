@@ -1,5 +1,7 @@
 # guzzle-laravel
 
+[![Total Downloads](https://poser.pugx.org/wbswjc/guzzle-laravel/downloads)](https://packagist.org/packages/wbswjc/guzzle-laravel)
+
 Customized guzzle client.
 
 提供了 3 个方法, 用于发起请求并尝试使用 'json_decode()' 对响应数据进行解析.
