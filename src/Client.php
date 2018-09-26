@@ -25,7 +25,7 @@ class Client extends GuzzleClient
             $response = parent::request($method, $uri, $options)->getBody()->getContents();
         } catch (\Exception $e) {
             throw new RequestException(Config::get('app.debug')
-                ? '接口调用失败, 调试信息: uri: ' . $uri . ', options: ' . json_encode($options)
+                ? '接口调用失败, 调试信息: uri: ' . $uri . ', options: ' . json_encode($options, JSON_UNESCAPED_UNICODE)
                 : '接口调用失败');
         }
 
@@ -33,7 +33,7 @@ class Client extends GuzzleClient
             return \GuzzleHttp\json_decode($response, true);
         } catch (\Exception $e) {
             throw new BadResponseException(Config::get('app.debug')
-                ? '接口返回错误, 调试信息: uri: ' . $uri . ', options: ' . json_encode($options) . ', response: ' . $response
+                ? '接口返回错误, 调试信息: uri: ' . $uri . ', options: ' . json_encode($options, JSON_UNESCAPED_UNICODE) . ', response: ' . $response
                 : '接口返回错误');
         }
     }
